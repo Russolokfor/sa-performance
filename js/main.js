@@ -71,14 +71,17 @@ function initMobileNav() {
  * Rolagem suave com gerenciamento de foco para acessibilidade
  */
 function initSmoothScroll() {
+  // Seleciona apenas links de âncora pura da mesma página (href começa exatamente com "#")
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      const href = this.getAttribute('href');
+      // Ignora links que não são âncoras puras da mesma página
+      if (!href || href === '#' || !href.startsWith('#')) return;
 
-      const targetEl = document.querySelector(targetId);
+      const targetEl = document.querySelector(href);
       if (targetEl) {
         e.preventDefault();
+        const targetId = href;
         
         // Rolagem com respeito a movimento reduzido
         const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
