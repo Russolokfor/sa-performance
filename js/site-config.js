@@ -25,13 +25,13 @@ const SITE_CONFIG = {
    * Quando disponíveis, preencha os valores e altere 'ativo' para true.
    */
   contato: {
-    status: "em_atualizacao", // 'em_atualizacao' | 'ativo'
-    mensagemStatus: "Canais oficiais de atendimento direto em fase de homologação cadastral.",
+    status: "ativo",
+    mensagemStatus: "Atendimento direto via WhatsApp.",
     whatsapp: {
-      ativo: false,
-      numeroFormatado: "", // Ex: "+55 (11) 99999-9999"
-      link: "", // Ex: "https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20conversar%20sobre%20estratégia%20digital."
-      orientacao: "Em breve disponível para conversas diretas."
+      ativo: true,
+      numeroFormatado: "(62) 99222-8280",
+      link: "https://wa.me/5562992228280?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20estrat%C3%A9gia%20digital.",
+      orientacao: "Atendimento direto e imediato via WhatsApp."
     },
     email: {
       ativo: false,
