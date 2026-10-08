@@ -2,22 +2,18 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/projetos/kamilla-gondim", "destination": "/projetos/kamilla-gondim/index.html" },
+    { "source": "/projetos/bruna-soutello", "destination": "/projetos/bruna-soutello/index.html" },
+    { "source": "/projetos/isotech-isolamentos", "destination": "/projetos/isotech-isolamentos/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ]
